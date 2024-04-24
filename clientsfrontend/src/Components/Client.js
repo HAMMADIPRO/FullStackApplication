@@ -63,7 +63,7 @@ export default function Client() {
 
 
 
-            <h1>Students</h1>
+            <h1>Clients</h1>
 
             <Paper elevation={3} style={paperStyle}>
 
