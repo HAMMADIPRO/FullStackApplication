@@ -5,9 +5,12 @@ import Hammadi.pro.react.Service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RequestMapping("/client")
 @RestController
+@CrossOrigin
 public class ClientController {
 
     @Autowired
@@ -19,5 +22,8 @@ public class ClientController {
     return "New client is added";
     }
 
-
+    @GetMapping("/getAll")
+    public List<Client> getAllclient(){
+        return clientService.getAllClients();
+    }
 }
